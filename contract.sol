@@ -20,9 +20,14 @@ contract Contract {
     // Proprietário do contrato
     address private owner;
 
+    // Erros
+    error UnauthorizedAccess(address caller, address owner);
+
     // Modificador
     modifier onlyOwner {
-        require(msg.sender == owner, "Only owner can call this function");
+         if (msg.sender != owner) {
+            revert UnauthorizedAccess(msg.sender, owner);
+        }
         _;
     }
     
