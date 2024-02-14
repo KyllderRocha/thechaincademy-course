@@ -2,42 +2,52 @@
 pragma solidity ^0.8.0;
 
 contract Contract {
-    // Variável de estado
-    uint256 public myNumber;
+    // Variáveis de estado
+
+    //Número inteiro.
+    uint256 public myUint;
+    //Endereço Ethereum.
+    address public myAddress;
+    //String
+    string public myString;
+    //Booleano
+    bool public myBool;
+    //Valor de 32 bytes
+    bytes32 public myBytes32;
 
     // Variável de estado privada
+
+    // Proprietário do contrato
     address private owner;
 
-    // Construtor do contrato
-    constructor() {
-        owner = msg.sender;
-        myNumber = 0;
-    }
-
-    // Função pública para atualizar o número
-    function setNumber(uint256 _newValue) public {
-        myNumber = _newValue;
-    }
-
-    // Função pública que retorna o número
-    function getNumber() public view returns (uint256) {
-        return myNumber;
-    }
-
-    // Função interna que duplica o número
-    function doubleNumber() internal {
-        myNumber *= 2;
-    }
-
-    // Modificador de visibilidade
+    // Modificador
     modifier onlyOwner {
         require(msg.sender == owner, "Only owner can call this function");
         _;
     }
 
-    // Função apenas para o proprietário
-    function modifyNumber() public onlyOwner {
-        doubleNumber();
+    // Construtor
+    constructor() {
+        owner = msg.sender;
+        myUint = 123;
+        myAddress = msg.sender;
+        myString = "Hello, world!";
+        myBool = true;
+        myBytes32 = keccak256(abi.encodePacked("solidity"));
     }
 
+    // Função pública para atualizar myUint
+    function setMyUint(uint256 newValue) public onlyOwner {
+        myUint = newValue;
+    }
+
+    // Função pública para atualizar myString
+    function setMyString(string memory newValue) public onlyOwner {
+        myString = newValue;
+    }
+
+    // Função pública para retornar o valor de myUint
+    function getMyUint() public view returns (uint256) {
+        return myUint;
+    }
 }
