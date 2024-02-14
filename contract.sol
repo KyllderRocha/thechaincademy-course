@@ -25,6 +25,12 @@ contract Contract {
         require(msg.sender == owner, "Only owner can call this function");
         _;
     }
+    
+    // Modificador
+    modifier onlyPositiveValues (uint256 value) {
+        require(value > 0, "Only Positive Values in this function");
+        _;
+    }
 
     // Construtor
     constructor() {
@@ -37,7 +43,7 @@ contract Contract {
     }
 
     // Função pública para atualizar myUint
-    function setMyUint(uint256 newValue) public onlyOwner {
+    function setMyUint(uint256 newValue) public onlyOwner onlyPositiveValues(newValue) {
         myUint = newValue;
     }
 
