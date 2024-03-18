@@ -1,0 +1,48 @@
+name: Truffle CI
+
+on:
+  
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16.14.0'
+
+    - name: Install Ganache
+      run: npm install -g ganache-cli
+
+    - name: Start Ganache
+      run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
+
+    - name: Show Ganache Log
+      run: cat ganache.log
+
+    - name: Install Truffle
+      run: npm install -g truffle
+
+    - name: Compile contracts
+      run: truffle compile
+
+    - name: Run tests
+      run: truffle test
+
+    - name: Deploy contracts to Ganache
+      run: truffle migrate --network development
+
+    # Improvement 
+    # Coverage analysis: Analyze code coverage with tools like solidity-coverage.
+    # Static analysis: Perform security audits with tools like slither.
