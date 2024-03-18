@@ -1,11 +1,13 @@
 # The Chaincademy Course
 
-## Overview
+## Overview and Goals
 
 Welcome to **The Chaincademy Course**, Chaincademy lies in its unique approach to education in the Web3 domain, offering a transformative experience for junior developers and creating a bridge between learning and real-world application. This README provides an overview of blockchain technology and its key concepts.
+Our main objectives include learn about Web3 domain and get development experience.
 
 ## Table of Contents
 
+- [Technologies Used](#technologies-used)
 - [Blockchain Technology](#blockchain-technology)
   - [What is Blockchain?](#what-is-blockchain)
   - [Key Concepts](#key-concepts)
@@ -14,7 +16,17 @@ Welcome to **The Chaincademy Course**, Chaincademy lies in its unique approach t
     - [Consensus Mechanisms](#consensus-mechanisms)
     - [Smart Contracts](#smart-contracts)
 - [Ethereum Blockchain](#ethereum-blockchain)
-- [Ganache Configuration and Deployment](#ganache-configuration-and-deployment)
+- [Setup Instructions](#setup-instructions)
+- [Contribution Guidelines](#contribution-guidelines)
+
+## Technologies Used
+
+The project utilizes a variety of technologies, including:
+
+- **Programming Languages**: Solidity, JavaScript
+- **Frameworks and Libraries**: Truffle, Node
+- **Development Tools**: Ganache, Remix IDE, VSC
+- **Version Control**: Git
 
 ## Blockchain Technology
 
@@ -63,19 +75,22 @@ Smart contracts are self-executing contracts with the terms of the agreement dir
 - **Single chain**: Only one chain of blocks is considered valid (GHOST protocol).
 - **GHOST protocol**: Chooses the longest chain (most work done) as the valid one.
 
-## Ganache Configuration and Deployment
+## Setup Instructions
 
+To set up to project locally on your machine, follow these instructions: We will need the Ganache
 Ganache is an Ethereum development environment that provides a local blockchain for developing and testing smart contracts. Follow the steps below to set up and deploy your contract using Ganache:
 
 ### Configuration Steps:
 
-1. **Install Ganache**: Download and install Ganache from the [official website](https://www.trufflesuite.com/ganache).
+1. **Clone the Repository**: git clone "https://github.com/KyllderRocha/thechaincademy-course"
+
+2. **Install Ganache**: Download and install Ganache from the [official website](https://www.trufflesuite.com/ganache).
    
-2. **Run Ganache**: After installation, start Ganache. You will be greeted with a graphical interface displaying details about your local blockchain.
+3. **Run Ganache**: After installation, start Ganache. You will be greeted with a graphical interface displaying details about your local blockchain.
 
-3. **Custom Network Configuration (Optional)**: If desired, you can configure Ganache to use a custom network with specific settings. This can be useful if you need to simulate different network conditions.
+4. **Custom Network Configuration (Optional)**: If desired, you can configure Ganache to use a custom network with specific settings. This can be useful if you need to simulate different network conditions.
 
-4. **Truffle Configuration**: In the `truffle-config.js` file of your Truffle project, make sure the development network configuration points to the correct host and port of Ganache. By default, Ganache uses host `127.0.0.1` and port `7545` for RPC.
+5. **Truffle Configuration**: In the `truffle-config.js` file of your Truffle project, make sure the development network configuration points to the correct host and port of Ganache. By default, Ganache uses host `127.0.0.1` and port `7545` for RPC.
 
 ### Deployment Steps:
 
@@ -88,3 +103,21 @@ Ganache is an Ethereum development environment that provides a local blockchain 
 4. **Interact with Contracts**: After deployment, you can interact with your contracts using the Ganache interface or any other Ethereum development tool, such as the Truffle Console or command-line interface.
 
 With these steps, you'll be able to set up and deploy smart contracts using Ganache in your local development environment. Be sure to consult the official documentation for Ganache and Truffle for more details on configuration and deployment.
+
+
+## Contribution Guidelines
+
+We welcome contributions from the community to enhance the project. If you're interested in contributing, please follow these guidelines:
+
+- **Fork the Repository**: Click the "Fork" button on the top right corner of this repository.
+- **Create a Branch**: Create a new branch for your contribution.
+- **Make Changes**: Make your desired changes to the codebase.
+- **Test**: Ensure that your changes pass all tests.
+- **Commit Changes**: Commit your changes with clear and descriptive commit messages.
+- **Push Changes**: Push your changes to your forked repository.
+- **Submit a Pull Request**: Submit a pull request to the main repository, explaining your changes and why they should be merged.
+
+Feel free to reach out to us if you have any questions or need assistance with contributing!
+
+
+
