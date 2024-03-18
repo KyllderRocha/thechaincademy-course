@@ -1,13 +1,9 @@
 name: Truffle CI
 
 on:
-  
   push:
     branches:
-      - main
-  pull_request:
-    branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -20,19 +16,22 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '16.14.0'
+        node-version: '12.x'
 
     - name: Install Ganache
-      run: npm install -g ganache-cli
+      run: |
+        curl -OL https://github.com/trufflesuite/ganache-cli/releases/download/v7.0.0/ganache-cli-7.0.0-x86_64.AppImage
+        chmod +x ganache-cli-7.0.0-x86_64.AppImage
+        sudo mv ganache-cli-7.0.0-x86_64.AppImage /usr/local/bin/ganache-cli
 
     - name: Start Ganache
       run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
 
-    - name: Show Ganache Log
-      run: cat ganache.log
-
     - name: Install Truffle
       run: npm install -g truffle
+
+    - name: Install dependencies
+      run: npm install
 
     - name: Compile contracts
       run: truffle compile
@@ -42,7 +41,3 @@ jobs:
 
     - name: Deploy contracts to Ganache
       run: truffle migrate --network development
-
-    # Improvement 
-    # Coverage analysis: Analyze code coverage with tools like solidity-coverage.
-    # Static analysis: Perform security audits with tools like slither.
