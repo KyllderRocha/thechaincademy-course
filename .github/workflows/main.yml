@@ -37,12 +37,11 @@ jobs:
     - name: Compile contracts
       run: truffle compile
 
-    - name: Docker ps
-      run: docker ps
+    # - name: Docker ps
+    #   run: docker ps
 
+    - name: Run tests
+      run: truffle test
 
-    # - name: Run tests
-    #   run: truffle test
-
-    # - name: Deploy contracts to Ganache
-    #   run: truffle migrate --network development
+    - name: Deploy contracts to Ganache
+      run: truffle migrate --network development
