@@ -32,8 +32,8 @@ jobs:
     - name: Start Ganache
       run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
 
-    - name: Show Ganache folders
-      run: ls -l /usr/local/bin/ganache-cli
+    # - name: Show Ganache folders
+    #   run: ls -l /usr/local/bin/ganache-cli
 
     - name: Show Ganache Log
       run: cat ganache.log
