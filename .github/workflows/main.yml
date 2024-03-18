@@ -23,17 +23,21 @@ jobs:
         node-version: '16.14.0'
 
     - name: Install Ganache
-      run: |
-        curl -OL https://github.com/trufflesuite/ganache-cli/releases/download/v7.0.0/ganache-cli-7.0.0-x86_64.AppImage
-        chmod +x ganache-cli-7.0.0-x86_64.AppImage
-        sudo mv ganache-cli-7.0.0-x86_64.AppImage /usr/local/bin/ganache-cli
+      run: npm install -g ganache-cli
+      # run: |
+      #   curl -OL https://github.com/trufflesuite/ganache-cli/releases/download/v7.0.0/ganache-cli-7.0.0-x86_64.AppImage
+      #   chmod +x ganache-cli-7.0.0-x86_64.AppImage
+      #   sudo mv ganache-cli-7.0.0-x86_64.AppImage /usr/local/bin/ganache-cli
 
     - name: Start Ganache
       run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
 
+    - name: Show Ganache folders
+      run: ls -l /usr/local/bin/ganache-cli
+
     - name: Show Ganache Log
       run: cat ganache.log
-      
+
     - name: Install Truffle
       run: npm install -g truffle
 
