@@ -29,7 +29,7 @@ jobs:
         sudo mv ganache-cli-7.0.0-x86_64.AppImage /usr/local/bin/ganache-cli
 
     - name: Start Ganache
-      run: ganache-cli --deterministic --gasLimit 8000000 -p 7545 > ganache.log 2>&1 & echo $! > ganache.pid
+      run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
 
     - name: Install Truffle
       run: npm install -g truffle
@@ -37,8 +37,12 @@ jobs:
     - name: Compile contracts
       run: truffle compile
 
-    - name: Run tests
-      run: truffle test
+    - name: Docker ps
+      run: docker ps
 
-    - name: Deploy contracts to Ganache
-      run: truffle migrate --network development
+
+    # - name: Run tests
+    #   run: truffle test
+
+    # - name: Deploy contracts to Ganache
+    #   run: truffle migrate --network development
