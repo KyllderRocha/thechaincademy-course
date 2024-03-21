@@ -11,7 +11,7 @@ contract("CRUDContract", (accounts) => {
         await crudContract.createItem("Item 1");
         const item = await crudContract.readItem(1);
 
-        assert.equal(item.id.toNumber(), 1, "Item ID should match");
+        assert.equal(item.id, 1, "Item ID should match");
         assert.equal(item.name, "Item 1", "Item name should match");
     });
 
@@ -26,15 +26,23 @@ contract("CRUDContract", (accounts) => {
     it("should delete an existing item", async() => {
         await crudContract.createItem("Item 1");
         await crudContract.deleteItem(1);
-        const item = await crudContract.readItem(1);
+        try {
+            const item = await crudContract.readItem(1);
+        } catch (e) {
+            assert(e.message.includes("Item not found"));
+            return
+        }
+        assert(false)
 
-        assert.equal(item.id.toNumber(), 0, "Item should be deleted");
     });
 
     it("should return empty values for non-existent item", async() => {
-        const item = await crudContract.readItem(999);
-
-        assert.equal(item.id.toNumber(), 0, "Item ID should be 0 for non-existent item");
-        assert.equal(item.name, "", "Item name should be empty for non-existent item");
+        try {
+            const item = await crudContract.readItem(999);
+        } catch (e) {
+            assert(e.message.includes("Item not found"));
+            return
+        }
+        assert(false)
     });
 });

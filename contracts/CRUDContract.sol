@@ -20,10 +20,10 @@ contract CRUDContract {
         nextId++;
     }
 
-    function readItem(uint _id) public view returns (uint, string memory) {
+    function readItem(uint _id) public view returns (Item memory) {
         for (uint i = 0; i < items.length; i++) {
             if (items[i].id == _id) {
-                return (items[i].id, items[i].name);
+                return items[i];
             }
         }
         revert("Item not found");
