@@ -1,0 +1,22 @@
+{
+  "name": "thechaincademy-course",
+  "version": "1.0.0",
+  "description": "Welcome to **The Chaincademy Course**, Chaincademy lies in its unique approach to education in the Web3 domain, offering a transformative experience for junior developers and creating a bridge between learning and real-world application. This README provides an overview of blockchain technology and its key concepts.\r Our main objectives include learn about Web3 domain and get development experience.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyllderRocha/thechaincademy-course.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KyllderRocha/thechaincademy-course/issues"
+  },
+  "homepage": "https://github.com/KyllderRocha/thechaincademy-course#readme"
+}
