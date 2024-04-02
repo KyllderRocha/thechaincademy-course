@@ -17,10 +17,10 @@
             <label for="Value">Value:</label>
             <input type="text" class="form-control" id="Value">
         </div>
-        <button type="button" class="btn btn-warning mb-2" onclick="connectMetamask()">Connect Metamask</button>
-        <button type="button" class="btn btn-danger mb-2" onclick="connectContract()">Connect Contract</button>
-        <button type="button" class="btn btn-primary mb-2" onclick="readValue()">Read Value</button>
-        <button type="button" class="btn btn-success mb-2" onclick="setValue()">Set Value</button>
+        <button type="button" id="btnConnectMetamask" class="btn btn-warning mb-2" onclick="connectMetamask()">Connect Metamask</button>
+        <button type="button" id="btnConnectContract" class="btn btn-danger mb-2" onclick="connectContract()">Connect Contract</button>
+        <button type="button" id="btnConnectReadValue" class="btn btn-primary mb-2" onclick="readValue()">Read Value</button>
+        <button type="button" id="btnConnectSerValue" class="btn btn-success mb-2" onclick="setValue()">Set Value</button>
 
         <p id="accountArea"></p>
         <p id="contractArea"></p>
@@ -37,16 +37,16 @@
 
     <script>
         //1- connect metamask
-        let account = ;
-        // const connectMetamask = async() => {
-        //     if (window.ethereum !== "undefined") {
-        //         const accounts = await ethereum.request({
-        //             method: "eth_requestAccounts"
-        //         });
-        //         account = accounts[0];
-        //         document.getElementById("accountArea").innerHTML = account;
-        //     }
-        // }
+        // let account = ;
+        const connectMetamask = async() => {
+            if (window.ethereum !== "undefined") {
+                const accounts = await ethereum.request({
+                    method: "eth_requestAccounts"
+                });
+                account = accounts[0];
+                document.getElementById("accountArea").innerHTML = account;
+            }
+        }
 
         //2- connect to smart contract
         const connectContract = async() => {
@@ -167,7 +167,7 @@
                 "stateMutability": "nonpayable",
                 "type": "function"
             }];
-            const Address = "0x765039e0078C2F08D0d76Baf695a5863efDC0c7D";
+            const Address = "0xD63FEE9B782BfFdbD5e534523CbC0afb79d6656A";
             window.web3 = await new Web3(window.ethereum);
             window.contract = await new window.web3.eth.Contract(ABI, Address);
             document.getElementById("contractArea").innerHTML = "connected to smart contract";
