@@ -52,6 +52,16 @@ contract SimpleContract {
         myUint = newValue;
     }
 
+    // Função pública para atualizar myUint
+    function setValue(uint256 newValue) public{
+        myUint = newValue;
+    }
+
+    // Função pública para retornar o valor de myUint
+    function getValue() public view returns (uint256) {
+        return myUint;
+    }
+
     // Função pública para atualizar myString
     function setMyString(string memory newValue) public onlyOwner {
         myString = newValue;
