@@ -34,13 +34,19 @@ jobs:
     - name: Install Truffle
       run: npm install -g truffle
 
+    - name: Open Backend Folder
+      run: cd backend
+
     - name: Compile contracts
+      run: cd backend
       run: truffle compile
 
     - name: Run tests
+      run: cd backend
       run: truffle test
 
     - name: Deploy contracts to Ganache
+      run: cd backend
       run: truffle migrate --network development
 
     # Improvement 
