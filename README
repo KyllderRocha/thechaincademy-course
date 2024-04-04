@@ -82,7 +82,11 @@ Ganache is an Ethereum development environment that provides a local blockchain 
 
 ### Configuration Steps:
 
-1. **Clone the Repository**: git clone "https://github.com/KyllderRocha/thechaincademy-course"
+ - **Clone the Repository**: git clone "https://github.com/KyllderRocha/thechaincademy-course"
+
+#### Configuration Backend:
+
+1. **Install Dependences**: Install Dependences to Node `npm install`.
 
 2. **Install Ganache**: Download and install Ganache from the [official website](https://www.trufflesuite.com/ganache).
    
@@ -91,6 +95,14 @@ Ganache is an Ethereum development environment that provides a local blockchain 
 4. **Custom Network Configuration (Optional)**: If desired, you can configure Ganache to use a custom network with specific settings. This can be useful if you need to simulate different network conditions.
 
 5. **Truffle Configuration**: In the `truffle-config.js` file of your Truffle project, make sure the development network configuration points to the correct host and port of Ganache. By default, Ganache uses host `127.0.0.1` and port `7545` for RPC.
+ 
+#### Configuration Frontend:
+
+1. **Install Dependences**: Install Dependences to Node `npm install`.
+
+2. **Execute the server**: Use the comand `node serve.js` to start the server
+
+3.  **Open the frontendr**: Open your browser, go to the URL `http://localhost:5000/`
 
 ### Deployment Steps:
 
@@ -98,12 +110,20 @@ Ganache is an Ethereum development environment that provides a local blockchain 
 
 2. **Contract Deployment**: Create migrations to deploy your contracts on Ganache. You can create a new migration file in the `migrations` folder of your Truffle project. For example, `1_deploy_contract.js`. Be sure to use the `deployer` object to deploy your contracts on Ganache.
 
-3. **Run Migrations**: Use the `truffle migrate` command to run the migrations and deploy your contracts on Ganache.
+3. **Run Migrations**: Use the `truffle migrate` command to run the migrations and deploy your contracts on Ganache, you can change the network to TestNet using `truffle migrate --network NAME` change network config in `truffle-config.js`.
 
 4. **Interact with Contracts**: After deployment, you can interact with your contracts using the Ganache interface or any other Ethereum development tool, such as the Truffle Console or command-line interface.
 
 With these steps, you'll be able to set up and deploy smart contracts using Ganache in your local development environment. Be sure to consult the official documentation for Ganache and Truffle for more details on configuration and deployment.
 
+## Contracts Guide
+There are six contracts completed
+- **CRUDContract**: Contract for basic CRUD functions
+- **Vehicle / Car / Motorcycle**: Basic inheritance functions contract
+- **Math / Contract**: Contract for importing another contract
+- **Migrations**: Update contract
+- **SimpleContract**: Contract for simple functions and types
+- **SimpleVoting**: Contract to simulate a vote
 
 ## Contribution Guidelines
 
