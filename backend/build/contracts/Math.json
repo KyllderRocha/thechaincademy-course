@@ -26,9 +26,9 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"base\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"exponent\",\"type\":\"uint256\"}],\"name\":\"power\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/library.sol\":\"Math\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/library.sol\":{\"keccak256\":\"0xe7d9b50bd315d83098177963871346612b9a9f1b752601bd20a7e8b18630da8e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://334843967f43d70669871578e70574d040abacd7f3846856d05a2503c5efeaa3\",\"dweb:/ipfs/QmUtXyFAJQyj4oeqmQQSTSKrLa8znW6SSLXmGgnkWBr42o\"]}},\"version\":1}",
-  "bytecode": "0x610254610053600b82828239805160001a607314610046577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063c04f01fc1461003a575b600080fd5b610054600480360381019061004f91906100e3565b61006a565b6040516100619190610132565b60405180910390f35b6000806001905060005b8381101561009d578482610088919061017c565b91508080610095906101d6565b915050610074565b508091505092915050565b600080fd5b6000819050919050565b6100c0816100ad565b81146100cb57600080fd5b50565b6000813590506100dd816100b7565b92915050565b600080604083850312156100fa576100f96100a8565b5b6000610108858286016100ce565b9250506020610119858286016100ce565b9150509250929050565b61012c816100ad565b82525050565b60006020820190506101476000830184610123565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610187826100ad565b9150610192836100ad565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156101cb576101ca61014d565b5b828202905092915050565b60006101e1826100ad565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036102135761021261014d565b5b60018201905091905056fea26469706673582212201fa8045ea028bca228b3b554a0fda409293c5ec1e14bdf3ea5638c9543d856a164736f6c634300080d0033",
-  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063c04f01fc1461003a575b600080fd5b610054600480360381019061004f91906100e3565b61006a565b6040516100619190610132565b60405180910390f35b6000806001905060005b8381101561009d578482610088919061017c565b91508080610095906101d6565b915050610074565b508091505092915050565b600080fd5b6000819050919050565b6100c0816100ad565b81146100cb57600080fd5b50565b6000813590506100dd816100b7565b92915050565b600080604083850312156100fa576100f96100a8565b5b6000610108858286016100ce565b9250506020610119858286016100ce565b9150509250929050565b61012c816100ad565b82525050565b60006020820190506101476000830184610123565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610187826100ad565b9150610192836100ad565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156101cb576101ca61014d565b5b828202905092915050565b60006101e1826100ad565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036102135761021261014d565b5b60018201905091905056fea26469706673582212201fa8045ea028bca228b3b554a0fda409293c5ec1e14bdf3ea5638c9543d856a164736f6c634300080d0033",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.13+commit.abaa5c0e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"base\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"exponent\",\"type\":\"uint256\"}],\"name\":\"power\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"External library for mathematical operations.\",\"kind\":\"dev\",\"methods\":{\"power(uint256,uint256)\":{\"details\":\"Function to calculate the power of a number.\",\"params\":{\"base\":\"The base number.\",\"exponent\":\"The exponent.\"},\"returns\":{\"_0\":\"The result of base raised to the power of exponent.\"}}},\"title\":\"Math\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Library.sol\":\"Math\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Library.sol\":{\"keccak256\":\"0x069bd6787c4d19a2d8363dc06cf2fe3b3c8cd963137fdd910563d05b292d9294\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4d49dea403106559b44985ef75083a97f0dfe263efa1c32f3157ae34840f35a4\",\"dweb:/ipfs/QmS2XCkVkU26jLmCLN7H5nAhdYUzT6Pih2W8jsQf6vZHCT\"]}},\"version\":1}",
+  "bytecode": "0x610254610053600b82828239805160001a607314610046577f4e487b7100000000000000000000000000000000000000000000000000000000600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063c04f01fc1461003a575b600080fd5b610054600480360381019061004f91906100e3565b61006a565b6040516100619190610132565b60405180910390f35b6000806001905060005b8381101561009d578482610088919061017c565b91508080610095906101d6565b915050610074565b508091505092915050565b600080fd5b6000819050919050565b6100c0816100ad565b81146100cb57600080fd5b50565b6000813590506100dd816100b7565b92915050565b600080604083850312156100fa576100f96100a8565b5b6000610108858286016100ce565b9250506020610119858286016100ce565b9150509250929050565b61012c816100ad565b82525050565b60006020820190506101476000830184610123565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610187826100ad565b9150610192836100ad565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156101cb576101ca61014d565b5b828202905092915050565b60006101e1826100ad565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036102135761021261014d565b5b60018201905091905056fea264697066735822122034c77ad606e6fac6684a8eaeb2f73467318fc80334b756792eb3315cc2f140d664736f6c634300080d0033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600436106100355760003560e01c8063c04f01fc1461003a575b600080fd5b610054600480360381019061004f91906100e3565b61006a565b6040516100619190610132565b60405180910390f35b6000806001905060005b8381101561009d578482610088919061017c565b91508080610095906101d6565b915050610074565b508091505092915050565b600080fd5b6000819050919050565b6100c0816100ad565b81146100cb57600080fd5b50565b6000813590506100dd816100b7565b92915050565b600080604083850312156100fa576100f96100a8565b5b6000610108858286016100ce565b9250506020610119858286016100ce565b9150509250929050565b61012c816100ad565b82525050565b60006020820190506101476000830184610123565b92915050565b7f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b6000610187826100ad565b9150610192836100ad565b9250817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff04831182151516156101cb576101ca61014d565b5b828202905092915050565b60006101e1826100ad565b91507fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82036102135761021261014d565b5b60018201905091905056fea264697066735822122034c77ad606e6fac6684a8eaeb2f73467318fc80334b756792eb3315cc2f140d664736f6c634300080d0033",
   "immutableReferences": {},
   "generatedSources": [],
   "deployedGeneratedSources": [
@@ -1269,26 +1269,26 @@
       "name": "#utility.yul"
     }
   ],
-  "sourceMap": "99:310:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
-  "deployedSourceMap": "99:310:4:-:0;;;;;;;;;;;;;;;;;;;;;;;;176:230;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;246:7;266:14;283:1;266:18;;300:9;295:80;319:8;315:1;:12;295:80;;;359:4;349:14;;;;;:::i;:::-;;;329:3;;;;;:::i;:::-;;;;295:80;;;;392:6;385:13;;;176:230;;;;:::o;88:117:6:-;197:1;194;187:12;334:77;371:7;400:5;389:16;;334:77;;;:::o;417:122::-;490:24;508:5;490:24;:::i;:::-;483:5;480:35;470:63;;529:1;526;519:12;470:63;417:122;:::o;545:139::-;591:5;629:6;616:20;607:29;;645:33;672:5;645:33;:::i;:::-;545:139;;;;:::o;690:474::-;758:6;766;815:2;803:9;794:7;790:23;786:32;783:119;;;821:79;;:::i;:::-;783:119;941:1;966:53;1011:7;1002:6;991:9;987:22;966:53;:::i;:::-;956:63;;912:117;1068:2;1094:53;1139:7;1130:6;1119:9;1115:22;1094:53;:::i;:::-;1084:63;;1039:118;690:474;;;;;:::o;1170:126::-;1265:24;1283:5;1265:24;:::i;:::-;1260:3;1253:37;1170:126;;:::o;1302:238::-;1403:4;1441:2;1430:9;1426:18;1418:26;;1454:79;1530:1;1519:9;1515:17;1506:6;1454:79;:::i;:::-;1302:238;;;;:::o;1546:180::-;1594:77;1591:1;1584:88;1691:4;1688:1;1681:15;1715:4;1712:1;1705:15;1732:348;1772:7;1795:20;1813:1;1795:20;:::i;:::-;1790:25;;1829:20;1847:1;1829:20;:::i;:::-;1824:25;;2017:1;1949:66;1945:74;1942:1;1939:81;1934:1;1927:9;1920:17;1916:105;1913:131;;;2024:18;;:::i;:::-;1913:131;2072:1;2069;2065:9;2054:20;;1732:348;;;;:::o;2086:233::-;2125:3;2148:24;2166:5;2148:24;:::i;:::-;2139:33;;2194:66;2187:5;2184:77;2181:103;;2264:18;;:::i;:::-;2181:103;2311:1;2304:5;2300:13;2293:20;;2086:233;;;:::o",
-  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n// Declaração da biblioteca externa\r\nlibrary Math {\r\n    // Função para calcular a potência de um número\r\n    function power(uint256 base, uint256 exponent) external pure returns (uint256) {\r\n        uint256 result = 1;\r\n        for (uint256 i = 0; i < exponent; i++) {\r\n            result *= base;\r\n        }\r\n        return result;\r\n    }\r\n}\r\n\r\n// Contrato que utiliza a biblioteca externa\r\ncontract Contract {\r\n    // Importação da biblioteca externa\r\n    using Math for uint256;\r\n\r\n    // Função que utiliza a função power da biblioteca externa\r\n    function calculatePower(uint256 base, uint256 exponent) public pure returns (uint256) {\r\n        return base.power(exponent);\r\n    }\r\n}\r\n",
-  "sourcePath": "Z:\\ADS\\thechaincademy-course\\backend\\contracts\\library.sol",
+  "sourceMap": "141:472:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "141:472:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;380:230;;;;;;;;;;;;;:::i;:::-;;:::i;:::-;;;;;;;:::i;:::-;;;;;;;;;450:7;470:14;487:1;470:18;;504:9;499:80;523:8;519:1;:12;499:80;;;563:4;553:14;;;;;:::i;:::-;;;533:3;;;;;:::i;:::-;;;;499:80;;;;596:6;589:13;;;380:230;;;;:::o;88:117:6:-;197:1;194;187:12;334:77;371:7;400:5;389:16;;334:77;;;:::o;417:122::-;490:24;508:5;490:24;:::i;:::-;483:5;480:35;470:63;;529:1;526;519:12;470:63;417:122;:::o;545:139::-;591:5;629:6;616:20;607:29;;645:33;672:5;645:33;:::i;:::-;545:139;;;;:::o;690:474::-;758:6;766;815:2;803:9;794:7;790:23;786:32;783:119;;;821:79;;:::i;:::-;783:119;941:1;966:53;1011:7;1002:6;991:9;987:22;966:53;:::i;:::-;956:63;;912:117;1068:2;1094:53;1139:7;1130:6;1119:9;1115:22;1094:53;:::i;:::-;1084:63;;1039:118;690:474;;;;;:::o;1170:126::-;1265:24;1283:5;1265:24;:::i;:::-;1260:3;1253:37;1170:126;;:::o;1302:238::-;1403:4;1441:2;1430:9;1426:18;1418:26;;1454:79;1530:1;1519:9;1515:17;1506:6;1454:79;:::i;:::-;1302:238;;;;:::o;1546:180::-;1594:77;1591:1;1584:88;1691:4;1688:1;1681:15;1715:4;1712:1;1705:15;1732:348;1772:7;1795:20;1813:1;1795:20;:::i;:::-;1790:25;;1829:20;1847:1;1829:20;:::i;:::-;1824:25;;2017:1;1949:66;1945:74;1942:1;1939:81;1934:1;1927:9;1920:17;1916:105;1913:131;;;2024:18;;:::i;:::-;1913:131;2072:1;2069;2065:9;2054:20;;1732:348;;;;:::o;2086:233::-;2125:3;2148:24;2166:5;2148:24;:::i;:::-;2139:33;;2194:66;2187:5;2184:77;2181:103;;2264:18;;:::i;:::-;2181:103;2311:1;2304:5;2300:13;2293:20;;2086:233;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity ^0.8.0;\r\n\r\n/**\r\n * @title Math\r\n * @dev External library for mathematical operations.\r\n */\r\nlibrary Math {\r\n    /**\r\n     * @dev Function to calculate the power of a number.\r\n     * @param base The base number.\r\n     * @param exponent The exponent.\r\n     * @return The result of base raised to the power of exponent.\r\n     */\r\n    function power(uint256 base, uint256 exponent) external pure returns (uint256) {\r\n        uint256 result = 1;\r\n        for (uint256 i = 0; i < exponent; i++) {\r\n            result *= base;\r\n        }\r\n        return result;\r\n    }\r\n}\r\n\r\n/**\r\n * @title Contract\r\n * @dev Contract that uses the Math library for power calculation.\r\n */\r\ncontract Contract {\r\n    // Importing the Math library\r\n    using Math for uint256;\r\n\r\n    /**\r\n     * @dev Function that uses the power function from the Math library.\r\n     * @param base The base number.\r\n     * @param exponent The exponent.\r\n     * @return The result of base raised to the power of exponent.\r\n     */\r\n    function calculatePower(uint256 base, uint256 exponent) public pure returns (uint256) {\r\n        return base.power(exponent);\r\n    }\r\n}\r\n",
+  "sourcePath": "Z:\\ADS\\thechaincademy-course\\backend\\contracts\\Library.sol",
   "ast": {
-    "absolutePath": "project:/contracts/library.sol",
+    "absolutePath": "project:/contracts/Library.sol",
     "exportedSymbols": {
       "Contract": [
-        552
+        380
       ],
       "Math": [
-        533
+        359
       ]
     },
-    "id": 553,
+    "id": 381,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 500,
+        "id": 324,
         "literals": [
           "solidity",
           "^",
@@ -1296,7 +1296,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:4"
+        "src": "33:23:2"
       },
       {
         "abstract": false,
@@ -1304,35 +1304,41 @@
         "canonicalName": "Math",
         "contractDependencies": [],
         "contractKind": "library",
+        "documentation": {
+          "id": 325,
+          "nodeType": "StructuredDocumentation",
+          "src": "60:79:2",
+          "text": " @title Math\n @dev External library for mathematical operations."
+        },
         "fullyImplemented": true,
-        "id": 533,
+        "id": 359,
         "linearizedBaseContracts": [
-          533
+          359
         ],
         "name": "Math",
-        "nameLocation": "107:4:4",
+        "nameLocation": "149:4:2",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "body": {
-              "id": 531,
+              "id": 357,
               "nodeType": "Block",
-              "src": "255:151:4",
+              "src": "459:151:2",
               "statements": [
                 {
                   "assignments": [
-                    510
+                    336
                   ],
                   "declarations": [
                     {
                       "constant": false,
-                      "id": 510,
+                      "id": 336,
                       "mutability": "mutable",
                       "name": "result",
-                      "nameLocation": "274:6:4",
+                      "nameLocation": "478:6:2",
                       "nodeType": "VariableDeclaration",
-                      "scope": 531,
-                      "src": "266:14:4",
+                      "scope": 357,
+                      "src": "470:14:2",
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1340,10 +1346,10 @@
                         "typeString": "uint256"
                       },
                       "typeName": {
-                        "id": 509,
+                        "id": 335,
                         "name": "uint256",
                         "nodeType": "ElementaryTypeName",
-                        "src": "266:7:4",
+                        "src": "470:7:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1352,17 +1358,17 @@
                       "visibility": "internal"
                     }
                   ],
-                  "id": 512,
+                  "id": 338,
                   "initialValue": {
                     "hexValue": "31",
-                    "id": 511,
+                    "id": 337,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": true,
                     "kind": "number",
                     "lValueRequested": false,
                     "nodeType": "Literal",
-                    "src": "283:1:4",
+                    "src": "487:1:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_rational_1_by_1",
                       "typeString": "int_const 1"
@@ -1370,28 +1376,28 @@
                     "value": "1"
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "266:18:4"
+                  "src": "470:18:2"
                 },
                 {
                   "body": {
-                    "id": 527,
+                    "id": 353,
                     "nodeType": "Block",
-                    "src": "334:41:4",
+                    "src": "538:41:2",
                     "statements": [
                       {
                         "expression": {
-                          "id": 525,
+                          "id": 351,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
                           "lValueRequested": false,
                           "leftHandSide": {
-                            "id": 523,
+                            "id": 349,
                             "name": "result",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 510,
-                            "src": "349:6:4",
+                            "referencedDeclaration": 336,
+                            "src": "553:6:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1400,26 +1406,26 @@
                           "nodeType": "Assignment",
                           "operator": "*=",
                           "rightHandSide": {
-                            "id": 524,
+                            "id": 350,
                             "name": "base",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 502,
-                            "src": "359:4:4",
+                            "referencedDeclaration": 328,
+                            "src": "563:4:2",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
                             }
                           },
-                          "src": "349:14:4",
+                          "src": "553:14:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
                         },
-                        "id": 526,
+                        "id": 352,
                         "nodeType": "ExpressionStatement",
-                        "src": "349:14:4"
+                        "src": "553:14:2"
                       }
                     ]
                   },
@@ -1428,18 +1434,18 @@
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     },
-                    "id": 519,
+                    "id": 345,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftExpression": {
-                      "id": 517,
+                      "id": 343,
                       "name": "i",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 514,
-                      "src": "315:1:4",
+                      "referencedDeclaration": 340,
+                      "src": "519:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1448,38 +1454,38 @@
                     "nodeType": "BinaryOperation",
                     "operator": "<",
                     "rightExpression": {
-                      "id": 518,
+                      "id": 344,
                       "name": "exponent",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 504,
-                      "src": "319:8:4",
+                      "referencedDeclaration": 330,
+                      "src": "523:8:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "315:12:4",
+                    "src": "519:12:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
                     }
                   },
-                  "id": 528,
+                  "id": 354,
                   "initializationExpression": {
                     "assignments": [
-                      514
+                      340
                     ],
                     "declarations": [
                       {
                         "constant": false,
-                        "id": 514,
+                        "id": 340,
                         "mutability": "mutable",
                         "name": "i",
-                        "nameLocation": "308:1:4",
+                        "nameLocation": "512:1:2",
                         "nodeType": "VariableDeclaration",
-                        "scope": 528,
-                        "src": "300:9:4",
+                        "scope": 354,
+                        "src": "504:9:2",
                         "stateVariable": false,
                         "storageLocation": "default",
                         "typeDescriptions": {
@@ -1487,10 +1493,10 @@
                           "typeString": "uint256"
                         },
                         "typeName": {
-                          "id": 513,
+                          "id": 339,
                           "name": "uint256",
                           "nodeType": "ElementaryTypeName",
-                          "src": "300:7:4",
+                          "src": "504:7:2",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1499,17 +1505,17 @@
                         "visibility": "internal"
                       }
                     ],
-                    "id": 516,
+                    "id": 342,
                     "initialValue": {
                       "hexValue": "30",
-                      "id": 515,
+                      "id": 341,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": true,
                       "kind": "number",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "312:1:4",
+                      "src": "516:1:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_rational_0_by_1",
                         "typeString": "int_const 0"
@@ -1517,11 +1523,11 @@
                       "value": "0"
                     },
                     "nodeType": "VariableDeclarationStatement",
-                    "src": "300:13:4"
+                    "src": "504:13:2"
                   },
                   "loopExpression": {
                     "expression": {
-                      "id": 521,
+                      "id": 347,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
@@ -1529,14 +1535,14 @@
                       "nodeType": "UnaryOperation",
                       "operator": "++",
                       "prefix": false,
-                      "src": "329:3:4",
+                      "src": "533:3:2",
                       "subExpression": {
-                        "id": 520,
+                        "id": 346,
                         "name": "i",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 514,
-                        "src": "329:1:4",
+                        "referencedDeclaration": 340,
+                        "src": "533:1:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1547,54 +1553,60 @@
                         "typeString": "uint256"
                       }
                     },
-                    "id": 522,
+                    "id": 348,
                     "nodeType": "ExpressionStatement",
-                    "src": "329:3:4"
+                    "src": "533:3:2"
                   },
                   "nodeType": "ForStatement",
-                  "src": "295:80:4"
+                  "src": "499:80:2"
                 },
                 {
                   "expression": {
-                    "id": 529,
+                    "id": 355,
                     "name": "result",
                     "nodeType": "Identifier",
                     "overloadedDeclarations": [],
-                    "referencedDeclaration": 510,
-                    "src": "392:6:4",
+                    "referencedDeclaration": 336,
+                    "src": "596:6:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 508,
-                  "id": 530,
+                  "functionReturnParameters": 334,
+                  "id": 356,
                   "nodeType": "Return",
-                  "src": "385:13:4"
+                  "src": "589:13:2"
                 }
               ]
             },
+            "documentation": {
+              "id": 326,
+              "nodeType": "StructuredDocumentation",
+              "src": "161:213:2",
+              "text": " @dev Function to calculate the power of a number.\n @param base The base number.\n @param exponent The exponent.\n @return The result of base raised to the power of exponent."
+            },
             "functionSelector": "c04f01fc",
-            "id": 532,
+            "id": 358,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "power",
-            "nameLocation": "185:5:4",
+            "nameLocation": "389:5:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 505,
+              "id": 331,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 502,
+                  "id": 328,
                   "mutability": "mutable",
                   "name": "base",
-                  "nameLocation": "199:4:4",
+                  "nameLocation": "403:4:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 532,
-                  "src": "191:12:4",
+                  "scope": 358,
+                  "src": "395:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1602,10 +1614,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 501,
+                    "id": 327,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "191:7:4",
+                    "src": "395:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1615,13 +1627,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 504,
+                  "id": 330,
                   "mutability": "mutable",
                   "name": "exponent",
-                  "nameLocation": "213:8:4",
+                  "nameLocation": "417:8:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 532,
-                  "src": "205:16:4",
+                  "scope": 358,
+                  "src": "409:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1629,10 +1641,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 503,
+                    "id": 329,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "205:7:4",
+                    "src": "409:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1641,21 +1653,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "190:32:4"
+              "src": "394:32:2"
             },
             "returnParameters": {
-              "id": 508,
+              "id": 334,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 507,
+                  "id": 333,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 532,
-                  "src": "246:7:4",
+                  "scope": 358,
+                  "src": "450:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1663,10 +1675,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 506,
+                    "id": 332,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "246:7:4",
+                    "src": "450:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1675,17 +1687,17 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "245:9:4"
+              "src": "449:9:2"
             },
-            "scope": 533,
-            "src": "176:230:4",
+            "scope": 359,
+            "src": "380:230:2",
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "external"
           }
         ],
-        "scope": 553,
-        "src": "99:310:4",
+        "scope": 381,
+        "src": "141:472:2",
         "usedErrors": []
       },
       {
@@ -1694,32 +1706,38 @@
         "canonicalName": "Contract",
         "contractDependencies": [],
         "contractKind": "contract",
+        "documentation": {
+          "id": 360,
+          "nodeType": "StructuredDocumentation",
+          "src": "617:96:2",
+          "text": " @title Contract\n @dev Contract that uses the Math library for power calculation."
+        },
         "fullyImplemented": true,
-        "id": 552,
+        "id": 380,
         "linearizedBaseContracts": [
-          552
+          380
         ],
         "name": "Contract",
-        "nameLocation": "468:8:4",
+        "nameLocation": "724:8:2",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "global": false,
-            "id": 536,
+            "id": 363,
             "libraryName": {
-              "id": 534,
+              "id": 361,
               "name": "Math",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 533,
-              "src": "533:4:4"
+              "referencedDeclaration": 359,
+              "src": "781:4:2"
             },
             "nodeType": "UsingForDirective",
-            "src": "527:23:4",
+            "src": "775:23:2",
             "typeName": {
-              "id": 535,
+              "id": 362,
               "name": "uint256",
               "nodeType": "ElementaryTypeName",
-              "src": "542:7:4",
+              "src": "790:7:2",
               "typeDescriptions": {
                 "typeIdentifier": "t_uint256",
                 "typeString": "uint256"
@@ -1728,20 +1746,20 @@
           },
           {
             "body": {
-              "id": 550,
+              "id": 378,
               "nodeType": "Block",
-              "src": "712:46:4",
+              "src": "1127:46:2",
               "statements": [
                 {
                   "expression": {
                     "arguments": [
                       {
-                        "id": 547,
+                        "id": 375,
                         "name": "exponent",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 540,
-                        "src": "741:8:4",
+                        "referencedDeclaration": 368,
+                        "src": "1156:8:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1756,32 +1774,32 @@
                         }
                       ],
                       "expression": {
-                        "id": 545,
+                        "id": 373,
                         "name": "base",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 538,
-                        "src": "730:4:4",
+                        "referencedDeclaration": 366,
+                        "src": "1145:4:2",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "id": 546,
+                      "id": 374,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "power",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 532,
-                      "src": "730:10:4",
+                      "referencedDeclaration": 358,
+                      "src": "1145:10:2",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_delegatecall_pure$_t_uint256_$_t_uint256_$returns$_t_uint256_$bound_to$_t_uint256_$",
                         "typeString": "function (uint256,uint256) pure returns (uint256)"
                       }
                     },
-                    "id": 548,
+                    "id": 376,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
@@ -1789,41 +1807,47 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "730:20:4",
+                    "src": "1145:20:2",
                     "tryCall": false,
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
                     }
                   },
-                  "functionReturnParameters": 544,
-                  "id": 549,
+                  "functionReturnParameters": 372,
+                  "id": 377,
                   "nodeType": "Return",
-                  "src": "723:27:4"
+                  "src": "1138:27:2"
                 }
               ]
             },
+            "documentation": {
+              "id": 364,
+              "nodeType": "StructuredDocumentation",
+              "src": "806:229:2",
+              "text": " @dev Function that uses the power function from the Math library.\n @param base The base number.\n @param exponent The exponent.\n @return The result of base raised to the power of exponent."
+            },
             "functionSelector": "f979f269",
-            "id": 551,
+            "id": 379,
             "implemented": true,
             "kind": "function",
             "modifiers": [],
             "name": "calculatePower",
-            "nameLocation": "635:14:4",
+            "nameLocation": "1050:14:2",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 541,
+              "id": 369,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 538,
+                  "id": 366,
                   "mutability": "mutable",
                   "name": "base",
-                  "nameLocation": "658:4:4",
+                  "nameLocation": "1073:4:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 551,
-                  "src": "650:12:4",
+                  "scope": 379,
+                  "src": "1065:12:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1831,10 +1855,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 537,
+                    "id": 365,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "650:7:4",
+                    "src": "1065:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1844,13 +1868,13 @@
                 },
                 {
                   "constant": false,
-                  "id": 540,
+                  "id": 368,
                   "mutability": "mutable",
                   "name": "exponent",
-                  "nameLocation": "672:8:4",
+                  "nameLocation": "1087:8:2",
                   "nodeType": "VariableDeclaration",
-                  "scope": 551,
-                  "src": "664:16:4",
+                  "scope": 379,
+                  "src": "1079:16:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1858,10 +1882,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 539,
+                    "id": 367,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "664:7:4",
+                    "src": "1079:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1870,21 +1894,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "649:32:4"
+              "src": "1064:32:2"
             },
             "returnParameters": {
-              "id": 544,
+              "id": 372,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 543,
+                  "id": 371,
                   "mutability": "mutable",
                   "name": "",
                   "nameLocation": "-1:-1:-1",
                   "nodeType": "VariableDeclaration",
-                  "scope": 551,
-                  "src": "703:7:4",
+                  "scope": 379,
+                  "src": "1118:7:2",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1892,10 +1916,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 542,
+                    "id": 370,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "703:7:4",
+                    "src": "1118:7:2",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1904,21 +1928,21 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "702:9:4"
+              "src": "1117:9:2"
             },
-            "scope": 552,
-            "src": "626:132:4",
+            "scope": 380,
+            "src": "1041:132:2",
             "stateMutability": "pure",
             "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 553,
-        "src": "459:302:4",
+        "scope": 381,
+        "src": "715:461:2",
         "usedErrors": []
       }
     ],
-    "src": "33:730:4"
+    "src": "33:1145:2"
   },
   "compiler": {
     "name": "solc",
@@ -1926,10 +1950,23 @@
   },
   "networks": {},
   "schemaVersion": "3.4.16",
-  "updatedAt": "2024-04-03T23:27:24.483Z",
+  "updatedAt": "2024-04-04T23:26:50.980Z",
   "devdoc": {
+    "details": "External library for mathematical operations.",
     "kind": "dev",
-    "methods": {},
+    "methods": {
+      "power(uint256,uint256)": {
+        "details": "Function to calculate the power of a number.",
+        "params": {
+          "base": "The base number.",
+          "exponent": "The exponent."
+        },
+        "returns": {
+          "_0": "The result of base raised to the power of exponent."
+        }
+      }
+    },
+    "title": "Math",
     "version": 1
   },
   "userdoc": {

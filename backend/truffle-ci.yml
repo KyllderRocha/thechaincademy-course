@@ -18,26 +18,33 @@ jobs:
       with:
         node-version: '12.x'
 
+    # Install ganache-cli to get a local blockchain
     - name: Install Ganache
       run: |
         curl -OL https://github.com/trufflesuite/ganache-cli/releases/download/v7.0.0/ganache-cli-7.0.0-x86_64.AppImage
         chmod +x ganache-cli-7.0.0-x86_64.AppImage
         sudo mv ganache-cli-7.0.0-x86_64.AppImage /usr/local/bin/ganache-cli
 
+    # Start the local blockchain
     - name: Start Ganache
       run: ganache-cli --deterministic --gasLimit 8000000 > ganache.log 2>&1 & echo $! > ganache.pid
 
+    # Install the truffle
     - name: Install Truffle
       run: npm install -g truffle
 
+    # Install the project dependencies
     - name: Install dependencies
       run: npm install
 
+    # Compile the contracts
     - name: Compile contracts
       run: truffle compile
 
+    # Execute the tests
     - name: Run tests
       run: truffle test
 
+    # Deploy the contracts into the blockchain local
     - name: Deploy contracts to Ganache
       run: truffle migrate --network development

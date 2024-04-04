@@ -1,74 +1,91 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+/**
+ * @title SimpleContract
+ * @dev Smart contract with basic data types and access control.
+ */
 contract SimpleContract {
-    // Variáveis de estado
+    // State variables
 
-    //Número inteiro.
+    // Unsigned integer.
     uint256 public myUint;
-    //Endereço Ethereum.
+    // Ethereum address.
     address public myAddress;
-    //String
+    // String.
     string public myString;
-    //Booleano
+    // Boolean.
     bool public myBool;
-    //Valor de 32 bytes
+    // Bytes32 value.
     bytes32 public myBytes32;
 
-    // Variável de estado privada
+    // Private state variable
 
-    // Proprietário do contrato
+    // Contract owner
     address private owner;
 
-    // Erros
+    // Errors
     error UnauthorizedAccess(address caller, address owner);
 
-    // Modificador
+    // Modifier
     modifier onlyOwner {
-         if (msg.sender != owner) {
-            revert UnauthorizedAccess(msg.sender, owner);
-        }
-        _;
-    }
-    
-    // Modificador
-    modifier onlyPositiveValues (uint256 value) {
-        require(value > 0, "Only Positive Values in this function");
+        require(msg.sender == owner, "Only the owner can call this function");
         _;
     }
 
-    // Construtor
+    // Modifier
+    modifier onlyPositiveValues(uint256 value) {
+        require(value > 0, "Only positive values allowed in this function");
+        _;
+    }
+
+    // Constructor
     constructor() {
-        owner = msg.sender;
-        myUint = 123;
-        myAddress = msg.sender;
-        myString = "Hello, world!";
-        myBool = true;
-        myBytes32 = keccak256(abi.encodePacked("solidity"));
+        owner = msg.sender; // Set the contract owner to the deployer
+        myUint = 123; // Initialize myUint with a default value
+        myAddress = msg.sender; // Initialize myAddress with the deployer's address
+        myString = "Hello, world!"; // Initialize myString with a default value
+        myBool = true; // Initialize myBool with a default value
+        myBytes32 = keccak256(abi.encodePacked("solidity")); // Initialize myBytes32 with a hash value
     }
 
-    // Função pública para atualizar myUint
+    /**
+     * @dev Public function to update myUint
+     * @param newValue The new value to set for myUint
+     */
     function setMyUint(uint256 newValue) public onlyOwner onlyPositiveValues(newValue) {
-        myUint = newValue;
+        myUint = newValue; // Update myUint with the new value
     }
 
-    // Função pública para atualizar myUint
-    function setValue(uint256 newValue) public{
-        myUint = newValue;
+    /**
+     * @dev Public function to set the value of myUint
+     * @param newValue The value to set for myUint
+     */
+    function setValue(uint256 newValue) public {
+        myUint = newValue; // Set the value of myUint
     }
 
-    // Função pública para retornar o valor de myUint
+    /**
+     * @dev Public function to get the value of myUint
+     * @return The value of myUint
+     */
     function getValue() public view returns (uint256) {
-        return myUint;
+        return myUint; // Return the value of myUint
     }
 
-    // Função pública para atualizar myString
+    /**
+     * @dev Public function to update myString
+     * @param newValue The new value to set for myString
+     */
     function setMyString(string memory newValue) public onlyOwner {
-        myString = newValue;
+        myString = newValue; // Update myString with the new value
     }
 
-    // Função pública para retornar o valor de myUint
+    /**
+     * @dev Public function to get the value of myUint
+     * @return The value of myUint
+     */
     function getMyUint() public view returns (uint256) {
-        return myUint;
+        return myUint; // Return the value of myUint
     }
 }

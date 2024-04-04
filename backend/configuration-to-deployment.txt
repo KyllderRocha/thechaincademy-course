@@ -1,6 +1,0 @@
-I needed to execute the command "truffle compile"
-Next I changed the compilers version in truffle-config.js to "0.8.13" because the version "0.8.21" return a error
-Then I execute the command "truffle migrate"
-And "truffle console" for open the console 
-In the console I get the instance "let instance = await Migrations.deployed()"
-And get the owner to test "instance.owner()"
