@@ -1,9 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// Declaração da biblioteca externa
+/**
+ * @title Math
+ * @dev External library for mathematical operations.
+ */
 library Math {
-    // Função para calcular a potência de um número
+    /**
+     * @dev Function to calculate the power of a number.
+     * @param base The base number.
+     * @param exponent The exponent.
+     * @return The result of base raised to the power of exponent.
+     */
     function power(uint256 base, uint256 exponent) external pure returns (uint256) {
         uint256 result = 1;
         for (uint256 i = 0; i < exponent; i++) {
@@ -13,12 +21,20 @@ library Math {
     }
 }
 
-// Contrato que utiliza a biblioteca externa
+/**
+ * @title Contract
+ * @dev Contract that uses the Math library for power calculation.
+ */
 contract Contract {
-    // Importação da biblioteca externa
+    // Importing the Math library
     using Math for uint256;
 
-    // Função que utiliza a função power da biblioteca externa
+    /**
+     * @dev Function that uses the power function from the Math library.
+     * @param base The base number.
+     * @param exponent The exponent.
+     * @return The result of base raised to the power of exponent.
+     */
     function calculatePower(uint256 base, uint256 exponent) public pure returns (uint256) {
         return base.power(exponent);
     }

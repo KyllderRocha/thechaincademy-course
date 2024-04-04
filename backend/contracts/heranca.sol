@@ -1,56 +1,93 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// Contrato base para um Veículo
+/**
+ * @title Vehicle
+ * @dev Base contract for a Vehicle.
+ */
 contract Vehicle {
-    // Variáveis de estado para armazenar informações básicas do veículo
-    string public make; // Marca do veículo
-    string public model; // Modelo do veículo
-    uint256 public year; // Ano de fabricação do veículo
+    // State variables to store basic vehicle information
+    string public make; // Vehicle make
+    string public model; // Vehicle model
+    uint256 public year; // Vehicle manufacturing year
 
-
+    /**
+     * @dev Constructor to initialize the Vehicle with the provided details.
+     * @param _make The make of the vehicle.
+     * @param _model The model of the vehicle.
+     * @param _year The manufacturing year of the vehicle.
+     */
     constructor(string memory _make, string memory _model, uint256 _year) {
         make = _make;
         model = _model;
         year = _year;
     }
 
-    // Função para obter os detalhes do veículo
+    /**
+     * @dev Function to get the details of the vehicle.
+     * @return The make, model, and year of the vehicle.
+     */
     function getDetails() public virtual view returns (string memory, string memory, uint256) {
         return (make, model, year);
     }
 }
 
-// Contrato para Carro, que herda de Vehicle
+/**
+ * @title Car
+ * @dev Contract for a Car, inheriting from Vehicle.
+ */
 contract Car is Vehicle {
-    // Variável de estado adicional para armazenar o número de portas do carro
-    uint256 public numDoors; // Número de portas do carro
+    // Additional state variable to store the number of doors of the car
+    uint256 public numDoors; // Number of doors of the car
 
+    /**
+     * @dev Constructor to initialize the Car with the provided details.
+     * @param _make The make of the car.
+     * @param _model The model of the car.
+     * @param _year The manufacturing year of the car.
+     * @param _numDoors The number of doors of the car.
+     */
     constructor(string memory _make, string memory _model, uint256 _year, uint256 _numDoors)
         Vehicle(_make, _model, _year)
     {
         numDoors = _numDoors;
     }
     
-    // Função para obter os detalhes do carro
+    /**
+     * @dev Function to get the details of the car.
+     * @return The make, model, and year of the car.
+     */
     function getDetails() public view override returns (string memory, string memory, uint256) {
-        return (make, model, year); // Retorna os detalhes básicos do veículo
+        return (make, model, year); // Returns the basic vehicle details
     }
 }
 
-// Contrato para Moto, que herda de Vehicle
+/**
+ * @title Motorcycle
+ * @dev Contract for a Motorcycle, inheriting from Vehicle.
+ */
 contract Motorcycle is Vehicle {
-    // Variável de estado adicional para armazenar o estilo da moto
-    string public style; // Estilo da moto
+    // Additional state variable to store the style of the motorcycle
+    string public style; // Motorcycle style
 
+    /**
+     * @dev Constructor to initialize the Motorcycle with the provided details.
+     * @param _make The make of the motorcycle.
+     * @param _model The model of the motorcycle.
+     * @param _year The manufacturing year of the motorcycle.
+     * @param _style The style of the motorcycle.
+     */
     constructor(string memory _make, string memory _model, uint256 _year, string memory _style)
         Vehicle(_make, _model, _year)
     {
         style = _style;
     }
     
-    // Função para obter os detalhes da moto
+    /**
+     * @dev Function to get the details of the motorcycle.
+     * @return The make, style, and year of the motorcycle.
+     */
     function getDetails() public view override returns (string memory, string memory, uint256) {
-        return (make, style, year); // Retorna os detalhes com estilo específico da moto
+        return (make, style, year); // Returns the details with motorcycle-specific style
     }
 }
