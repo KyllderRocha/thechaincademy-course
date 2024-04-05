@@ -24,6 +24,12 @@ contract("SimpleContract", (accounts) => {
         assert.equal(myBytes32, web3.utils.keccak256("solidity"), "myBytes32 should be initialized to the keccak256 hash of 'solidity'");
     });
 
+    // Test case to ensure that the contract returns the correct value of myUint
+    it("should return correct value for myUint", async() => {
+        const myUint = await simpleContract.getMyUint();
+        assert.equal(myUint.toNumber(), 123, "getMyUint should return correct value of myUint");
+    });
+
     // Test case to ensure that the contract can set a new value for myUint
     it("should set new value for myUint", async() => {
         const newValue = 456;
@@ -34,17 +40,17 @@ contract("SimpleContract", (accounts) => {
         assert.equal(myUint.toNumber(), newValue, "myUint should be updated to the new value");
     });
 
-    // // Test case to ensure that setting a negative value for myUint reverts with correct error message
-    // it("should revert when setting negative value for myUint", async() => {
-    //     const newValue = -123;
-    //     try {
-    //         await simpleContract.setMyUint(newValue, { from: owner });
-    //         assert.fail("Expected revert for setting negative value for myUint");
-    //     } catch (error) {
-    //         // Assertion to verify that the error message indicates setting negative value is not allowed
-    //         assert.include(error.message, "Only positive values", "Error message should indicate setting negative value is not allowed");
-    //     }
-    // });
+    // Test case to ensure that setting a negative value for myUint reverts with correct error message
+    it("should revert when setting negative value for myUint", async() => {
+        const newValue = -123;
+        try {
+            await simpleContract.setMyUint(newValue, { from: owner });
+            assert.fail("Expected revert for setting negative value for myUint");
+        } catch (error) {
+            // Assertion to verify that the error message indicates setting negative value is not allowed
+            assert.include(error.message, "Only positive values", "Error message should indicate setting negative value is not allowed");
+        }
+    });
 
     // Test case to ensure that the contract can set a new value for myString
     it("should set new value for myString", async() => {
@@ -56,21 +62,16 @@ contract("SimpleContract", (accounts) => {
         assert.equal(myString, newValue, "myString should be updated to the new value");
     });
 
-    // // Test case to ensure that only the owner can set a new value for myString
-    // it("should revert when setting new value for myString by non-owner", async() => {
-    //     const newValue = "New string";
-    //     try {
-    //         await simpleContract.setMyString(newValue, { from: accounts[1] });
-    //         assert.fail("Expected revert for setting new value for myString by non-owner");
-    //     } catch (error) {
-    //         // Assertion to verify that the error message indicates unauthorized access
-    //         assert.include(error.message, "UnauthorizedAccess", "Error message should indicate unauthorized access");
-    //     }
-    // });
-
-    // Test case to ensure that the contract returns the correct value of myUint
-    it("should return correct value for myUint", async() => {
-        const myUint = await simpleContract.getMyUint();
-        assert.equal(myUint.toNumber(), 123, "getMyUint should return correct value of myUint");
+    // Test case to ensure that only the owner can set a new value for myString
+    it("should revert when setting new value for myString by non-owner", async() => {
+        const newValue = "New string";
+        try {
+            await simpleContract.setMyString(newValue, { from: accounts[1] });
+            assert.fail("Expected revert for setting new value for myString by non-owner");
+        } catch (error) {
+            // Assertion to verify that the error message indicates unauthorized access
+            assert.include(error.message, "Only the owner can", "Error message should indicate unauthorized access");
+        }
     });
+
 });

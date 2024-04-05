@@ -9,7 +9,7 @@ contract SimpleContract {
     // State variables
 
     // Unsigned integer.
-    uint256 public myUint;
+    int256 public myUint;
     // Ethereum address.
     address public myAddress;
     // String.
@@ -34,7 +34,7 @@ contract SimpleContract {
     }
 
     // Modifier
-    modifier onlyPositiveValues(uint256 value) {
+    modifier onlyPositiveValues(int256 value) {
         require(value > 0, "Only positive values allowed in this function");
         _;
     }
@@ -53,7 +53,7 @@ contract SimpleContract {
      * @dev Public function to update myUint
      * @param newValue The new value to set for myUint
      */
-    function setMyUint(uint256 newValue) public onlyOwner onlyPositiveValues(newValue) {
+    function setMyUint(int256 newValue) public onlyOwner onlyPositiveValues(newValue) {
         myUint = newValue; // Update myUint with the new value
     }
 
@@ -61,7 +61,7 @@ contract SimpleContract {
      * @dev Public function to set the value of myUint
      * @param newValue The value to set for myUint
      */
-    function setValue(uint256 newValue) public {
+    function setValue(int256 newValue) public {
         myUint = newValue; // Set the value of myUint
     }
 
@@ -69,7 +69,7 @@ contract SimpleContract {
      * @dev Public function to get the value of myUint
      * @return The value of myUint
      */
-    function getValue() public view returns (uint256) {
+    function getValue() public view returns (int256) {
         return myUint; // Return the value of myUint
     }
 
@@ -85,7 +85,7 @@ contract SimpleContract {
      * @dev Public function to get the value of myUint
      * @return The value of myUint
      */
-    function getMyUint() public view returns (uint256) {
+    function getMyUint() public view returns (int256) {
         return myUint; // Return the value of myUint
     }
 }
