@@ -2,6 +2,3 @@ I needed to install truffle/hdwallet-provider to deploy
 I created an account on infura to have access to the sepolia testnet
 I claimed some test ETH at https://faucets.chain.link/
 The contract address is 0x0b890ade3A255D9c872D475AA549DE811f6399Be
-
-
-# Change this file
