@@ -25,6 +25,9 @@ jobs:
       with:
         node-version: '16.14.0'
 
+    - name: Install DotEnv
+      run: npm install dotenv
+
     - name: Install Ganache
       run: npm install -g ganache-cli
 
