@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
 
     steps:
     - name: Checkout code
@@ -21,6 +24,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '16.14.0'
+
+    - name: Install DotEnv
+      run: npm install dotenv
 
     - name: Install Ganache
       run: npm install -g ganache-cli
@@ -34,19 +40,13 @@ jobs:
     - name: Install Truffle
       run: npm install -g truffle
 
-    - name: Open Backend Folder
-      run: cd backend
-
     - name: Compile contracts
-      run: cd backend
       run: truffle compile
 
     - name: Run tests
-      run: cd backend
       run: truffle test
 
     - name: Deploy contracts to Ganache
-      run: cd backend
       run: truffle migrate --network development
 
     # Improvement 
