@@ -38,19 +38,16 @@ jobs:
       run: cd backend
 
     - name: Compile contracts
-      run: 
-        cd backend
-        truffle compile
+      working-directory: ./backend
+      run: truffle compile
 
     - name: Run tests
-      run: 
-        cd backend
-        truffle test
+      working-directory: ./backend
+      run: truffle test
 
     - name: Deploy contracts to Ganache
-      run: 
-        cd backend
-        truffle migrate --network development
+      working-directory: ./backend
+      run: truffle migrate --network development
 
     # Improvement 
     # Coverage analysis: Analyze code coverage with tools like solidity-coverage.
