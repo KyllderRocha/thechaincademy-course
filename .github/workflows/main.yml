@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
 
     steps:
     - name: Checkout code
@@ -34,19 +37,13 @@ jobs:
     - name: Install Truffle
       run: npm install -g truffle
 
-    - name: Open Backend Folder
-      run: cd backend
-
     - name: Compile contracts
-      working-directory: ./backend
       run: truffle compile
 
     - name: Run tests
-      working-directory: ./backend
       run: truffle test
 
     - name: Deploy contracts to Ganache
-      working-directory: ./backend
       run: truffle migrate --network development
 
     # Improvement 
